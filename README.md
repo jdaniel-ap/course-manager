@@ -37,10 +37,22 @@
   para iniciar o projeto rode o comando
 
   - `npm run dev`
+  
 
   A primeira visualização do aplicativo é uma página de login:
+  ![image](https://user-images.githubusercontent.com/74429277/139502580-117c4e35-fa68-4423-8384-c29c58bb6aab.png)
+  
+  Vista da pagina de cadastro:
+  ![image](https://user-images.githubusercontent.com/74429277/139502559-6b15a6b5-2176-4af1-8c49-c3ce929af94e.png)
 
-  Depois de começar, veremos um painel com quatro opções:
+
+
+  ### fluxo administrativo
+  
+  Depois de fazer login, veremos um painel com quatro opções:
+  
+  ![image](https://user-images.githubusercontent.com/74429277/139497620-62a96981-88ea-43b2-b399-21a74f135b72.png)
+
 
   - Modules: permite que o usuario visualize todos os módulos registrados
   - Lessons: permite que o usuario observe todas as aulas gravadas no banco
@@ -50,22 +62,45 @@
   A opção do 'Module' retorna a seguinte tela
 
   modulos cadastrados:
+  ![image](https://user-images.githubusercontent.com/74429277/139499496-268188c9-19ce-4ea8-adc9-a5c81fdb5274.png)
+
 
   sem modulos cadastrados:
+  ![image](https://user-images.githubusercontent.com/74429277/139499360-2c464a0e-ca52-4bdc-b043-7d62232a3f8e.png)
+
 
   Clicando no button "New module" retorna a seguinte tela:
+  ![image](https://user-images.githubusercontent.com/74429277/139499526-4e962634-dd61-4361-9f54-4e734fa0e72f.png)
+
 
   Clicando em um modulo retorna a seguinte tela
 
-  sem aulas:
+  sem lessons:
+  ![image](https://user-images.githubusercontent.com/74429277/139499298-67eb6b23-745b-4937-aa04-12cc49d43b0f.png)
 
-  com aulas:
+
+  com lessons:
+  ![image](https://user-images.githubusercontent.com/74429277/139502243-ad52fc45-4288-4104-84eb-bf5b3099882e.png)
+
 
   Clicando no button de "New lesson" retorna a seguinte tela:
+  ![image](https://user-images.githubusercontent.com/74429277/139501862-ed57487d-4269-4227-a29f-18ec16ecb806.png)
 
+  ### fluxo do usuario
+  
   o login com um usuário não administrador retorna a seguinte tela:
+  ![image](https://user-images.githubusercontent.com/74429277/139501927-4c331e4f-0a68-4907-8711-37ddc1e89b10.png)
 
-  Clicando em um modulo retorta a seguinte tela:
+
+  Clicando em um modulo retorta a seguinte tela
+  
+  com lessons:
+  ![image](https://user-images.githubusercontent.com/74429277/139502139-c0f49328-951a-4067-b749-b700c19a6b7e.png)
+
+  
+  sem lesson:
+  ![image](https://user-images.githubusercontent.com/74429277/139501982-e38da448-f749-458a-b1fa-c15ae559570b.png)
+
 
 ## API Documentation
 
