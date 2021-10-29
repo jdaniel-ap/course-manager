@@ -1,0 +1,1 @@
+export const noAdminError = 'This is an admin area, you don\'t have permission to access this resource';

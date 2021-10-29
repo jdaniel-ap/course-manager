@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "config-client": "cd client && npm install",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/server.ts\" \"npm run client\" ",
+    "build": "sucrase ./src -d ./dist --transforms typescript,imports && npx prisma migrate dev && node ./dist/models/admin.js",
+    "config": "concurrently \"npm install\" \" npm run config-client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.3.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "sucrase": "^3.20.3",
+    "ts-node-dev": "^1.1.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.5",
+    "@types/node": "^16.11.5",
+    "prisma": "^3.3.0"
+  }
+}
