@@ -22,7 +22,7 @@ function Lessons({ lessons, deleteLesson, user }) {
           )}
         </div>
       ))}
-      {lessons.length === 0 && <h3>Ainda não tem aulas registradas</h3>}
+      {lessons.length === 0 && <h3>There are no registered lessons yet</h3>}
     </div>
   );
 }

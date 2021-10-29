@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Header from "../components/Header";
 import { useRoute } from "../hooks/useRoute";
-import { deleteLesson, getLessonsById } from "../services/api";
+import { deleteLesson, deleteModule, getLessonsById } from "../services/api";
 import { useParams } from "react-router";
 import { useSelector } from "react-redux";
 import Lessons from "../components/Lessons";
@@ -25,6 +25,11 @@ function ModuleDetail() {
     getLessons();
   };
 
+  const handleDeleteModule = async () => {
+    const { data } = await deleteModule(id, token);
+    if (data.status === "success") return router("/admin/modules");
+  };
+
   useEffect(() => {
     getLessons();
   }, [getLessons]);
@@ -39,6 +44,7 @@ function ModuleDetail() {
             className="fas fa-edit edit"
             onClick={() => router(`/admin/module/${id}/edit`)}
           ></em>
+          <em className="fas fa-trash edit" onClick={handleDeleteModule}></em>
         </div>
         <Lessons lessons={lessons} deleteLesson={handleDelete} />
       </main>

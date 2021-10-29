@@ -15,6 +15,6 @@ const deleteModule = new DeleteModuleController();
 module.post('/new', validateToken, newModule.execute);
 module.get('/', validateToken, getModules.execute);
 module.put('/update', validateToken, editModule.execute);
-module.delete('/delete', validateToken, deleteModule.execute);
+module.delete('/delete/:id', validateToken, deleteModule.execute);
 
 export { module }

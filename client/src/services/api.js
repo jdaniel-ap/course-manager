@@ -150,3 +150,17 @@ export const createAdmin = async (loginFormValues, token) => {
 
   return request;
 }
+
+export const deleteModule = async (moduleId, token) => {
+  const request = await axios({
+    method: 'delete',
+    headers: {
+      Authorization: token,
+    },
+    url: `http://localhost:8080/api/module/delete/${moduleId}`,
+  }).catch(err => console.log(err.response));
+
+  console.log(request)
+
+  return request;
+}
